@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class ="form">
+    <div class="form">
       <form v-on:submit.prevent="add">
         <input v-model="name">
         <button>Add</button>

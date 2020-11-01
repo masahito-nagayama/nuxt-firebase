@@ -13,11 +13,11 @@ export const actions = {
     bindFirestoreRef('todos', todosRef)
   }),
   add: firestoreAction((context, name) => {
-    if(name,trim()) {
+    if(name.trim()) {
       todosRef.add({
         name: name,
         done: false,
-        created: firebase.firestore.FieldValue.serveTimestamp()
+        created: firebase.firestore.FieldValue.serverTimestamp()
       })
     }
   }),
